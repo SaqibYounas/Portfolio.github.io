@@ -2,10 +2,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import Header from '../components/Header';
 
 const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-6 py-16">
+      <Header/>
       {/* Page Heading */}
       <motion.h1
         className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
