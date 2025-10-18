@@ -18,15 +18,13 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "plugins": [
-      { "name": "next" }
-    ]
+    "plugins": [{ "name": "next" }]
   },
   "include": [
-  "next-env.d.ts",
-  ".next/types/**/*.ts",
-  "src/**/*.ts",
-  "src/**/*.tsx"
-],
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
   "exclude": ["node_modules"]
 }

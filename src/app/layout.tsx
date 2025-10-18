@@ -1,8 +1,12 @@
-import Header from '../components/Header';
-import HeroSection from '../components/HomePage';
-import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Image from 'next/image';
+import AnimatedWrapper from './components/AnimatedWrapper'; // Client component
 
-export const metadata: Metadata = {
+const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
+const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+
+export const metadata = {
   title: 'Muhammad Saqib Younas | Full Stack Developer Portfolio',
   description:
     'Portfolio of Muhammad Saqib Younas — Full Stack Developer based in Lahore, Pakistan. Skilled in React.js, Next.js, Node.js, and building responsive, modern web applications.',
@@ -17,15 +21,10 @@ export const metadata: Metadata = {
     'Frontend Developer',
     'Backend Developer',
   ],
-  authors: [
-    {
-      name: 'Muhammad Saqib Younas',
-      url: 'https://www.linkedin.com/in/muhammad-saqib-younas',
-    },
-  ],
+  authors: [{ name: 'Muhammad Saqib Younas', url: 'https://www.linkedin.com/in/muhammad-saqib-younas' }],
   creator: 'Muhammad Saqib Younas',
   publisher: 'Muhammad Saqib Younas',
-  metadataBase: new URL('https://your-portfolio-domain.vercel.app'), // change to your real domain
+  metadataBase: new URL('https://your-portfolio-domain.vercel.app'),
 
   openGraph: {
     title: 'Muhammad Saqib Younas | Full Stack Developer Portfolio',
@@ -60,18 +59,29 @@ export const metadata: Metadata = {
   },
 
   category: 'Portfolio',
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-  },
+  robots: { index: true, follow: true, nocache: false },
 };
 
-export default function Home() {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <Header />
-      <HeroSection />
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white relative min-h-screen`}
+      >
+        {/* ✅ Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/background.jpg"
+            alt="Background"
+            fill
+            className="object-cover brightness-75"
+            priority
+          />
+        </div>
+
+        {/* ✅ Client-side animation wrapper */}
+        <AnimatedWrapper>{children}</AnimatedWrapper>
+      </body>
+    </html>
   );
 }

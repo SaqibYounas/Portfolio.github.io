@@ -1,5 +1,5 @@
-import Header from '../components/Header';
-import HeroSection from '../components/HomePage';
+import Header from './components/Header';
+import HeroSection from './components/HomePage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
