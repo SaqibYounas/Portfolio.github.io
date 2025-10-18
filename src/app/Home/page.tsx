@@ -1,9 +1,9 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import Header from "../components/Header";
-import Image from "next/image";
-import { Linkedin, Github, Mail } from "lucide-react";
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import Header from '../components/Header';
+import Image from 'next/image';
+import { Linkedin, Github, Mail } from 'lucide-react';
 
 const Home: React.FC = () => {
   return (
@@ -21,12 +21,11 @@ const Home: React.FC = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-10">
-          
           {/* Animated Heading */}
           <motion.h1
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1, ease: 'easeOut' }}
             className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 drop-shadow-lg leading-tight"
           >
             Hi! I'm <span className="text-white">Muhammad Saqib Younas</span>
@@ -39,15 +38,15 @@ const Home: React.FC = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-gray-200 text-base sm:text-lg md:text-xl mt-4 max-w-2xl md:max-w-3xl leading-relaxed"
           >
-            I'm a{" "}
+            I'm a{' '}
             <span className="text-blue-400 font-semibold">
               Full Stack Developer
-            </span>{" "}
+            </span>{' '}
             based in Lahore, Pakistan — specializing in building modern and
-            responsive web applications using{" "}
+            responsive web applications using{' '}
             <span className="text-purple-400 font-semibold">
               React.js, Next.js, Node.js,
-            </span>{" "}
+            </span>{' '}
             and other modern technologies.
           </motion.h3>
 

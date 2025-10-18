@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -15,7 +15,7 @@ import {
   FaNetworkWired,
   FaBrain,
   FaCogs,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 import {
   SiTypescript,
   SiNextdotjs,
@@ -38,81 +38,102 @@ import {
   SiTestinglibrary,
   SiMysql,
   SiRailway,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 export default function SkillsPage() {
   const skillSections = [
     {
-      title: "Frontend Skills",
-      color: "from-blue-400 to-purple-500",
+      title: 'Frontend Skills',
+      color: 'from-blue-400 to-purple-500',
       skills: [
-        { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-        { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
-        { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-        { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
-        { name: "React.js", icon: <FaReact className="text-blue-400" /> },
-        { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
-        { name: "Redux", icon: <SiRedux className="text-purple-400" /> },
-        { name: "Zustand", icon: <FaBrain className="text-gray-300" /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
-        { name: "Bootstrap 5", icon: <SiBootstrap className="text-purple-500" /> },
+        { name: 'HTML5', icon: <FaHtml5 className="text-orange-500" /> },
+        { name: 'CSS3', icon: <FaCss3Alt className="text-blue-500" /> },
+        { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+        {
+          name: 'TypeScript',
+          icon: <SiTypescript className="text-blue-400" />,
+        },
+        { name: 'React.js', icon: <FaReact className="text-blue-400" /> },
+        { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
+        { name: 'Redux', icon: <SiRedux className="text-purple-400" /> },
+        { name: 'Zustand', icon: <FaBrain className="text-gray-300" /> },
+        {
+          name: 'Tailwind CSS',
+          icon: <SiTailwindcss className="text-cyan-400" />,
+        },
+        {
+          name: 'Bootstrap 5',
+          icon: <SiBootstrap className="text-purple-500" />,
+        },
       ],
     },
     {
-      title: "Backend Skills",
-      color: "from-green-400 to-teal-500",
+      title: 'Backend Skills',
+      color: 'from-green-400 to-teal-500',
       skills: [
-        { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-        { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-        { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
-        { name: "REST APIs", icon: <FaNetworkWired className="text-blue-400" /> },
-        { name: "Passport.js", icon: <FaUserShield className="text-gray-300" /> },
-        { name: "JWT", icon: <FaLock className="text-yellow-400" /> },
-        { name: "2FA", icon: <FaUserShield className="text-green-400" /> },
+        { name: 'Node.js', icon: <FaNodeJs className="text-green-500" /> },
+        { name: 'Express.js', icon: <SiExpress className="text-gray-300" /> },
+        { name: 'GraphQL', icon: <SiGraphql className="text-pink-500" /> },
+        {
+          name: 'REST APIs',
+          icon: <FaNetworkWired className="text-blue-400" />,
+        },
+        {
+          name: 'Passport.js',
+          icon: <FaUserShield className="text-gray-300" />,
+        },
+        { name: 'JWT', icon: <FaLock className="text-yellow-400" /> },
+        { name: '2FA', icon: <FaUserShield className="text-green-400" /> },
       ],
     },
     {
-      title: "Databases",
-      color: "from-sky-400 to-blue-500",
+      title: 'Databases',
+      color: 'from-sky-400 to-blue-500',
       skills: [
-        { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-        { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-400" /> },
-        { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
-        { name: "Redis", icon: <SiRedis className="text-red-500" /> },
+        { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
+        { name: 'PostgreSQL', icon: <SiPostgresql className="text-sky-400" /> },
+        { name: 'MySQL', icon: <SiMysql className="text-blue-400" /> },
+        { name: 'Redis', icon: <SiRedis className="text-red-500" /> },
       ],
     },
     {
-      title: "Cloud & DevOps",
-      color: "from-yellow-400 to-orange-500",
+      title: 'Cloud & DevOps',
+      color: 'from-yellow-400 to-orange-500',
       skills: [
-        { name: "AWS", icon: <FaAws className="text-yellow-400" /> },
-        { name: "Docker", icon: <FaDocker className="text-blue-400" /> },
-        { name: "Git", icon: <FaGitAlt className="text-orange-400" /> },
-        { name: "GitHub Actions (CI/CD)", icon: <SiGithubactions className="text-white" /> },
-        { name: "Nginx", icon: <SiNginx className="text-green-500" /> },
-        { name: "Vercel", icon: <SiVercel className="text-white" /> },
-        { name: "Netlify", icon: <SiNetlify className="text-cyan-400" /> },
-        { name: "Railway", icon: <SiRailway className="text-gray-300" /> },
-        { name: "Render", icon: <SiRender className="text-blue-400" /> },
+        { name: 'AWS', icon: <FaAws className="text-yellow-400" /> },
+        { name: 'Docker', icon: <FaDocker className="text-blue-400" /> },
+        { name: 'Git', icon: <FaGitAlt className="text-orange-400" /> },
+        {
+          name: 'GitHub Actions (CI/CD)',
+          icon: <SiGithubactions className="text-white" />,
+        },
+        { name: 'Nginx', icon: <SiNginx className="text-green-500" /> },
+        { name: 'Vercel', icon: <SiVercel className="text-white" /> },
+        { name: 'Netlify', icon: <SiNetlify className="text-cyan-400" /> },
+        { name: 'Railway', icon: <SiRailway className="text-gray-300" /> },
+        { name: 'Render', icon: <SiRender className="text-blue-400" /> },
       ],
     },
     {
-      title: "Testing",
-      color: "from-pink-400 to-red-500",
+      title: 'Testing',
+      color: 'from-pink-400 to-red-500',
       skills: [
-        { name: "Vitest", icon: <SiVitest className="text-green-400" /> },
-        { name: "React Testing Library", icon: <SiTestinglibrary className="text-red-400" /> },
-        { name: "Jest", icon: <SiJest className="text-red-500" /> },
-        { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+        { name: 'Vitest', icon: <SiVitest className="text-green-400" /> },
+        {
+          name: 'React Testing Library',
+          icon: <SiTestinglibrary className="text-red-400" />,
+        },
+        { name: 'Jest', icon: <SiJest className="text-red-500" /> },
+        { name: 'Postman', icon: <SiPostman className="text-orange-500" /> },
       ],
     },
     {
-      title: "Soft Skills",
-      color: "from-cyan-400 to-purple-500",
+      title: 'Soft Skills',
+      color: 'from-cyan-400 to-purple-500',
       skills: [
-        { name: "Problem Solving", icon: <FaCogs className="text-cyan-400" /> },
-        { name: "Teamwork", icon: <FaCogs className="text-purple-400" /> },
-        { name: "Communication", icon: <FaCogs className="text-blue-400" /> },
+        { name: 'Problem Solving', icon: <FaCogs className="text-cyan-400" /> },
+        { name: 'Teamwork', icon: <FaCogs className="text-purple-400" /> },
+        { name: 'Communication', icon: <FaCogs className="text-blue-400" /> },
       ],
     },
   ];
@@ -124,7 +145,7 @@ export default function SkillsPage() {
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: 'easeOut' }}
       >
         My Skills
       </motion.h1>
@@ -140,7 +161,7 @@ export default function SkillsPage() {
             transition={{
               duration: 1,
               delay: index * 0.3,
-              ease: "easeOut",
+              ease: 'easeOut',
             }}
             whileHover={{ scale: 1.05 }}
           >
