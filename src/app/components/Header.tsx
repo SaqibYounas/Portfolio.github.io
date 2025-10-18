@@ -18,8 +18,8 @@ const Header: React.FC = () => {
 
   const navItems = [
     { name: 'Home', href: '/', icon: <AiFillHome size={20} /> },
-    { name: 'About', href: '#about', icon: <AiFillInfoCircle size={20} /> },
-    { name: 'Projects', href: '#projects', icon: <AiFillProject size={20} /> },
+    { name: 'About', href: '/about', icon: <AiFillInfoCircle size={20} /> },
+    { name: 'Projects', href: '/projects', icon: <AiFillProject size={20} /> },
     { name: 'Skills', href: '/skills', icon: <AiFillStar size={20} /> },
     { name: 'Contact', href: '/contact', icon: <AiFillMail size={20} /> },
   ];

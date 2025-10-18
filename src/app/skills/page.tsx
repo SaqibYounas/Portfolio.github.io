@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Header from '../components/Header';
 import {
   FaHtml5,
   FaCss3Alt,
@@ -140,6 +141,7 @@ export default function SkillsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white px-8 py-16">
+      <Header/>
       {/* Heading Animation Same as Contact Page */}
       <motion.h1
         className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
