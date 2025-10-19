@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { LinkedinIcon, GithubIcon, MailIcon } from 'lucide-react';
 import Link from 'next/link';
+import { socialLinks } from '../data/contractlinks';
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
@@ -12,7 +12,6 @@ export default function HeroSection() {
   }, []);
 
   if (!mounted) {
-    // Render static placeholder during SSR to match HTML
     return (
       <div className="w-full h-screen flex items-center justify-center bg-gray-900 text-white">
         Loading...
@@ -37,9 +36,15 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 0.5 }}
         className="text-gray-200 text-base sm:text-lg md:text-xl mt-4 max-w-2xl md:max-w-3xl leading-relaxed"
       >
-        I&apos;m a <span className="text-blue-400 font-semibold">Full Stack Developer</span>{' '}
+        I&apos;m a{' '}
+        <span className="text-blue-400 font-semibold">
+          Full Stack Developer
+        </span>
         based in Lahore, Pakistan — specializing in{' '}
-        <span className="text-purple-400 font-semibold">React.js, Next.js, Node.js</span>.
+        <span className="text-purple-400 font-semibold">
+          React.js, Next.js, Node.js
+        </span>
+        .
       </motion.h3>
 
       <motion.div
@@ -62,29 +67,20 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 1.2 }}
         className="flex gap-6 mt-8"
       >
-        <Link
-          href="https://www.linkedin.com/in/muhammad-saqib-younas"
-          target="_blank"
-          className="text-white hover:text-blue-400 transition-colors"
-          aria-label="LinkedIn"
-        >
-          <LinkedinIcon size={26} />
-        </Link>
-        <Link
-          href="https://github.com/SaqibYounas"
-          target="_blank"
-          className="text-white hover:text-gray-300 transition-colors"
-          aria-label="GitHub"
-        >
-          <GithubIcon size={26} />
-        </Link>
-        <Link
-          href="mailto:muhammadsaqibyounas@gmail.com"
-          className="text-white hover:text-red-400 transition-colors"
-          aria-label="Email"
-        >
-          <MailIcon size={26} />
-        </Link>
+        {socialLinks.map((link) => {
+          const Icon = link.icon;
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              target="_blank"
+              className={`text-white ${link.color} hover:opacity-80 transition-all`}
+              aria-label={link.name}
+            >
+              <Icon size={26} />
+            </Link>
+          );
+        })}
       </motion.div>
     </div>
   );
