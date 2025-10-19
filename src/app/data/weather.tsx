@@ -15,3 +15,5 @@ export const projects: {
     liveDemo: weatherAppData.liveDemo,
   },
 ];
+
+export { weatherAppData };

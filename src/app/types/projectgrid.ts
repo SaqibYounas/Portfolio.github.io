@@ -1,3 +1,4 @@
+// src/types/projectgrid.ts
 export interface Project {
   title: string;
   description: string;

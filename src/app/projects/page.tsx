@@ -1,28 +1,18 @@
 import Header from '../components/Header';
 import ProjectsGrid from '../components/Projects/ProjectsGrid';
-
-const projects = [
-  {
-    title: 'Weather App',
-    description:
-      'A modern weather forecasting app built with HTML, CSS, and JavaScript. It fetches live weather data using APIs and displays temperature, humidity, and wind speed with a responsive UI.',
-    image: '/weather-app.jpg',
-  },
-  {
-    title: 'Calculator App',
-    description:
-      'A responsive and interactive calculator built using HTML, CSS, and JavaScript with support for basic arithmetic operations and keyboard input.',
-    image: '/calculator.jpg',
-  },
-  {
-    title: 'Portfolio Website',
-    description:
-      'A sleek personal portfolio built with Next.js, Tailwind CSS, and Framer Motion — showcasing projects, skills, and contact information.',
-    image: '/portfolio.jpg',
-  },
-];
+import { weatherAppData } from '../data/weather';
 
 export default function ProjectsPage() {
+  const projects = [
+    {
+      title: weatherAppData.title,
+      description: weatherAppData.shortDescription,
+      image: weatherAppData.image,
+      detailsPage: '/projects/weather-app',
+      liveDemo: weatherAppData.liveDemo,
+    },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col items-center bg-gray-900 px-6 py-16 text-white">
       <Header />
