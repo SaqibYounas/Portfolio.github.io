@@ -1,8 +1,6 @@
-// app/projects/page.tsx
 import Header from '../components/Header';
-import ProjectsGrid from '../components/Projects/ProjectsGrid'; // client component
+import ProjectsGrid from '../components/Projects/ProjectsGrid';
 
-// Example projects data (static)
 const projects = [
   {
     title: 'Weather App',

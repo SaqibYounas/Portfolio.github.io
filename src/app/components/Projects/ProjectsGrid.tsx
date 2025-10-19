@@ -2,9 +2,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '../../data/weather';
+import { ProjectsGridProps } from '../../types/projectgrid';
 
-const ProjectsGrid = () => {
+const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12">
       <motion.h1
@@ -45,12 +45,14 @@ const ProjectsGrid = () => {
               </p>
 
               <div className="mt-6 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-                <Link
-                  href={project.detailsPage}
-                  className="rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-center font-medium text-white transition hover:opacity-90"
-                >
-                  Read More →
-                </Link>
+                {project.detailsPage && (
+                  <Link
+                    href={project.detailsPage}
+                    className="rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-center font-medium text-white transition hover:opacity-90"
+                  >
+                    Read More →
+                  </Link>
+                )}
                 {project.liveDemo && (
                   <Link
                     href={project.liveDemo}
