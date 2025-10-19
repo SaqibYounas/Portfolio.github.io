@@ -4,14 +4,12 @@ import { skillSections } from '../data/skills';
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white px-8 py-16">
-      <Header />
-      <h1 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-900 px-6 py-16 text-white">
+      <h1 className="mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl">
         My Skills
       </h1>
-
-      {/* Client Component */}
+      <Header />
       <SkillsClient skillSections={skillSections} />
-    </div>
+    </main>
   );
 }

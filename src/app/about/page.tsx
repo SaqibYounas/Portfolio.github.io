@@ -12,7 +12,10 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-gray-900 text-white flex flex-col items-center px-6 py-16">
+    <div className="flex flex-col items-center bg-gray-900 px-6 py-16 text-white">
+      <h1 className="mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl">
+        About Me
+      </h1>
       <Header />
       <AboutHero />
       <ExperienceSection />

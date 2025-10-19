@@ -4,28 +4,25 @@ import { motion } from 'framer-motion';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
-      {/* Animated 404 Heading */}
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-900 px-4 text-white">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-8xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500"
+        className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-8xl font-extrabold text-transparent md:text-9xl"
       >
         404
       </motion.h1>
 
-      {/* Message */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="mt-4 text-lg md:text-xl text-gray-300 text-center"
+        className="mt-4 text-center text-lg text-gray-300 md:text-xl"
       >
         Oops! The page you’re looking for doesn’t exist.
       </motion.p>
 
-      {/* Home Button */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -34,14 +31,13 @@ export default function NotFound() {
       >
         <Link
           href="/"
-          className="px-6 py-3 rounded-xl text-lg font-medium text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:shadow-[0_0_15px_#a855f7] transition-all duration-300"
+          className="rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-6 py-3 text-lg font-medium text-white transition-all duration-300 hover:shadow-[0_0_15px_#a855f7]"
         >
           Go Back Home
         </Link>
       </motion.div>
 
-      {/* Decorative Glow Circle */}
-      <div className="absolute -z-10 w-[300px] h-[300px] rounded-full blur-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 animate-pulse" />
+      <div className="absolute -z-10 h-[300px] w-[300px] animate-pulse rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-3xl" />
     </div>
   );
 }

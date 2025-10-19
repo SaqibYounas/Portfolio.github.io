@@ -1,8 +1,6 @@
-// app/projects/page.tsx
 import Header from '../components/Header';
-import ProjectsGrid from '../components/Projects/ProjectsGrid'; // client component
+import ProjectsGrid from '../components/Projects/ProjectsGrid';
 
-// Example projects data (static)
 const projects = [
   {
     title: 'Weather App',
@@ -26,7 +24,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center px-6 py-16">
+    <div className="flex min-h-screen flex-col items-center bg-gray-900 px-6 py-16 text-white">
       <Header />
       <ProjectsGrid projects={projects} />
     </div>
