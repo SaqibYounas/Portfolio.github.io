@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import type { SkillSection } from '../../types/skills';
 
 interface SkillsClientProps {
-  skillSections: skillSections[];
+  skillSections: SkillSection[];
 }
 
 export default function SkillsClient({ skillSections }: SkillsClientProps) {
