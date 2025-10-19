@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { SkillSection } from '../../data/skills';
+import type { skillSections} from '../../data/skills';
 
 interface SkillsClientProps {
-  skillSections: SkillSection[];
+  skillSections: skillSections[];
 }
 
 export default function SkillsClient({ skillSections }: SkillsClientProps) {
