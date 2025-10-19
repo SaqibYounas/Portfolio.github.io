@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white relative min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} relative min-h-screen bg-gray-900 text-white antialiased`}
       >
         <div className="absolute inset-0 -z-10">
           <Image

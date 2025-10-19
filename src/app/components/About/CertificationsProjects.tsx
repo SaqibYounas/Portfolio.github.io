@@ -1,27 +1,27 @@
 export default function CertificationsProjects() {
   return (
-    <section className="max-w-6xl w-full mt-20">
-      <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent mb-10">
+    <section className="mt-20 w-full max-w-6xl">
+      <h2 className="mb-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-3xl font-bold text-transparent">
         Certifications & Projects
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-10">
-        <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700 text-gray-300 hover:border-purple-500 transition">
-          <h3 className="text-xl font-semibold text-blue-400 mb-3">
+      <div className="grid gap-10 md:grid-cols-2">
+        <div className="rounded-2xl border border-gray-700 bg-gray-800 p-6 text-gray-300 transition hover:border-purple-500">
+          <h3 className="mb-3 text-xl font-semibold text-blue-400">
             Certifications
           </h3>
-          <ul className="list-disc ml-5 space-y-1">
+          <ul className="ml-5 list-disc space-y-1">
             <li>SQL (Basic) — HackerRank</li>
             <li>SQL (Intermediate) — HackerRank</li>
             <li>CSS (Basic) — HackerRank</li>
           </ul>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700 text-gray-300 hover:border-purple-500 transition">
-          <h3 className="text-xl font-semibold text-blue-400 mb-3">
+        <div className="rounded-2xl border border-gray-700 bg-gray-800 p-6 text-gray-300 transition hover:border-purple-500">
+          <h3 className="mb-3 text-xl font-semibold text-blue-400">
             Highlighted Projects
           </h3>
-          <ul className="list-disc ml-5 space-y-2">
+          <ul className="ml-5 list-disc space-y-2">
             <li>
               <span className="font-semibold text-purple-400">
                 Weather Forecast App:

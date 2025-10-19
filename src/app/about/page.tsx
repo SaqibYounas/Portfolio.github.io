@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-gray-900 text-white flex flex-col items-center px-6 py-16">
+    <div className="flex flex-col items-center bg-gray-900 px-6 py-16 text-white">
       <Header />
       <AboutHero />
       <ExperienceSection />

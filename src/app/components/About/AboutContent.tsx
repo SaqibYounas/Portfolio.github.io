@@ -7,7 +7,7 @@ export default function AboutHero() {
   return (
     <>
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent"
+        className="mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -15,7 +15,7 @@ export default function AboutHero() {
         About Me
       </motion.h1>
 
-      <div className="grid md:grid-cols-2 gap-12 max-w-6xl items-center">
+      <div className="grid max-w-6xl items-center gap-12 md:grid-cols-2">
         {/* Profile Photo */}
         <motion.div
           className="flex justify-center"
@@ -43,11 +43,11 @@ export default function AboutHero() {
             Muhammad Saqib Younas
           </h2>
           <p className="text-gray-400">
-            <Mail className="inline-block mr-2 text-purple-400" size={18} />
+            <Mail className="mr-2 inline-block text-purple-400" size={18} />
             muhammadsaqibyounas11@gmail.com
           </p>
           <p>
-            <Linkedin className="inline-block mr-2 text-blue-400" size={18} />
+            <Linkedin className="mr-2 inline-block text-blue-400" size={18} />
             <a
               href="https://www.linkedin.com/in/muhammad-saqib-younas-0123aa329"
               target="_blank"
@@ -61,7 +61,7 @@ export default function AboutHero() {
             <MapPin className="text-purple-400" size={18} /> Lahore, Pakistan
           </p>
 
-          <p className="text-gray-300 leading-relaxed mt-4">
+          <p className="mt-4 leading-relaxed text-gray-300">
             I’m Muhammad Saqib, a BSIT student in my 5th semester who enjoys
             building websites that help people. My first web project made me
             realize how exciting it is to turn an idea into something real.
@@ -69,8 +69,8 @@ export default function AboutHero() {
 
           <p>
             I’ve completed internships at{' '}
-            <span className="text-blue-400 font-medium">Appaura</span> and{' '}
-            <span className="text-purple-400 font-medium">TechTommy</span>,
+            <span className="font-medium text-blue-400">Appaura</span> and{' '}
+            <span className="font-medium text-purple-400">TechTommy</span>,
             working with React.js, Node.js, and PostgreSQL. I’m eager to
             continue learning as a Full-Stack Developer Intern.
           </p>

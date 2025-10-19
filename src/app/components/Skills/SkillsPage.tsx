@@ -9,18 +9,18 @@ interface SkillsClientProps {
 
 export default function SkillsClient({ skillSections }: SkillsClientProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
       {skillSections.map((section, index) => (
         <motion.div
           key={index}
-          className="bg-gray-800/50 p-6 rounded-2xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-500"
+          className="rounded-2xl bg-gray-800/50 p-6 shadow-lg transition-all duration-500 hover:shadow-cyan-500/30"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: index * 0.3, ease: 'easeOut' }}
           whileHover={{ scale: 1.05 }}
         >
           <h2
-            className={`text-xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${section.color}`}
+            className={`mb-4 bg-gradient-to-r bg-clip-text text-xl font-semibold text-transparent ${section.color}`}
           >
             {section.title}
           </h2>
@@ -29,7 +29,7 @@ export default function SkillsClient({ skillSections }: SkillsClientProps) {
             {section.skills.map((skill, i) => (
               <motion.div
                 key={i}
-                className="flex items-center gap-2 bg-gray-700/50 px-3 py-2 rounded-lg hover:bg-cyan-500/20 transition-all duration-300 cursor-default"
+                className="flex cursor-default items-center gap-2 rounded-lg bg-gray-700/50 px-3 py-2 transition-all duration-300 hover:bg-cyan-500/20"
                 whileHover={{ scale: 1.1 }}
               >
                 <span className="text-2xl">{skill.icon}</span>

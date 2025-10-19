@@ -13,7 +13,7 @@ const ContactInfo: React.FC = () => {
     >
       {/* Contact Details */}
       <div>
-        <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+        <h2 className="mb-4 text-2xl font-semibold text-blue-400">
           Contact Info
         </h2>
         <div className="space-y-4 text-gray-300">
@@ -57,7 +57,7 @@ const ContactInfo: React.FC = () => {
 
       {/* Social Links */}
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold mb-3 text-blue-400">Follow Me</h2>
+        <h2 className="mb-3 text-2xl font-semibold text-blue-400">Follow Me</h2>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ const ContactInfo: React.FC = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`transition-transform transform hover:scale-110 ${link.color}`}
+                className={`transform transition-transform hover:scale-110 ${link.color}`}
               >
                 <Icon size={26} />
               </a>
