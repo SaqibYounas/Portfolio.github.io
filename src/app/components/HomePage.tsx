@@ -39,7 +39,7 @@ export default function HeroSection() {
         I&apos;m a{' '}
         <span className="font-semibold text-blue-400">
           Full Stack Developer
-        </span>
+        </span>{' '}
         based in Lahore, Pakistan — specializing in{' '}
         <span className="font-semibold text-purple-400">
           React.js, Next.js, Node.js
@@ -65,16 +65,17 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="mt-8 flex gap-6"
+        className="mt-8 flex gap-6 text-gray-300"
       >
         {socialLinks.map((link) => {
           const Icon = link.icon;
           return (
             <Link
-              key={link.name}
+              key={link.href}
               href={link.href}
               target="_blank"
-              className={`text-white ${link.color} transition-all hover:opacity-80`}
+              rel="noopener noreferrer"
+              className={`transform transition-transform hover:scale-110 ${link.color}`}
               aria-label={link.name}
             >
               <Icon size={26} />

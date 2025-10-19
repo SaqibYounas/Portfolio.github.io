@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-900 px-4 text-white">
-      {/* Animated 404 Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -15,7 +14,6 @@ export default function NotFound() {
         404
       </motion.h1>
 
-      {/* Message */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -25,7 +23,6 @@ export default function NotFound() {
         Oops! The page you’re looking for doesn’t exist.
       </motion.p>
 
-      {/* Home Button */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,7 +37,6 @@ export default function NotFound() {
         </Link>
       </motion.div>
 
-      {/* Decorative Glow Circle */}
       <div className="absolute -z-10 h-[300px] w-[300px] animate-pulse rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-3xl" />
     </div>
   );

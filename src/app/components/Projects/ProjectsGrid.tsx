@@ -1,23 +1,22 @@
 'use client';
-
-import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ProjectsGridProps } from '../../types/projects'; // import types
+import Link from 'next/link';
+import { projects } from '../../data/weather';
 
-const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
+const ProjectsGrid = () => {
   return (
-    <>
+    <section className="mx-auto max-w-7xl px-4 py-12">
       <motion.h1
         className="mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        transition={{ duration: 1 }}
       >
         My Projects
       </motion.h1>
 
-      <div className="grid w-full max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -45,18 +44,28 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
                   : project.description}
               </p>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 py-2 font-medium text-white transition hover:opacity-90"
-              >
-                Read More →
-              </motion.button>
+              <div className="mt-6 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
+                <Link
+                  href={project.detailsPage}
+                  className="rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-center font-medium text-white transition hover:opacity-90"
+                >
+                  Read More →
+                </Link>
+                {project.liveDemo && (
+                  <Link
+                    href={project.liveDemo}
+                    target="_blank"
+                    className="rounded-full bg-green-500 px-4 py-2 text-center font-medium text-white transition hover:opacity-90"
+                  >
+                    Live Demo
+                  </Link>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

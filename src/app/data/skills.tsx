@@ -39,7 +39,6 @@ import {
 } from 'react-icons/si';
 import { SkillSection } from '../types/skills';
 
-// Static Skills Data
 export const skillSections: SkillSection[] = [
   {
     title: 'Frontend Skills',

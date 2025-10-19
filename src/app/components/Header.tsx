@@ -27,12 +27,10 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-gray-900 text-white shadow-lg transition-all duration-300">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
         <h1 className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-2xl font-bold tracking-wide text-transparent md:text-3xl">
           <Link href="/">Portfolio</Link>
         </h1>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-10 text-lg font-medium">
             {navItems.map((item) => {

@@ -12,7 +12,7 @@ export default function AnimatedWrapper({
   const pathname = usePathname();
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen">
       <AnimatePresence mode="wait">
         <motion.div
           key={pathname}
@@ -20,7 +20,7 @@ export default function AnimatedWrapper({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className="absolute inset-0 min-h-screen w-full"
+          className="min-h-screen w-full" // 👈 absolute hata do
         >
           {children}
         </motion.div>

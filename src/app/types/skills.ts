@@ -8,3 +8,7 @@ export interface SkillSection {
   color: string;
   skills: Skill[];
 }
+
+export interface SkillsClientProps {
+  skillSections: SkillSection[];
+}
