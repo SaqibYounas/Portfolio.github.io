@@ -4,7 +4,10 @@ import Image from 'next/image';
 import AnimatedWrapper from './components/AnimatedWrapper'; // Client component
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Muhammad Saqib Younas | Full Stack Developer Portfolio',
@@ -21,7 +24,12 @@ export const metadata = {
     'Frontend Developer',
     'Backend Developer',
   ],
-  authors: [{ name: 'Muhammad Saqib Younas', url: 'https://www.linkedin.com/in/muhammad-saqib-younas' }],
+  authors: [
+    {
+      name: 'Muhammad Saqib Younas',
+      url: 'https://www.linkedin.com/in/muhammad-saqib-younas',
+    },
+  ],
   creator: 'Muhammad Saqib Younas',
   publisher: 'Muhammad Saqib Younas',
   metadataBase: new URL('https://your-portfolio-domain.vercel.app'),
@@ -62,13 +70,16 @@ export const metadata = {
   robots: { index: true, follow: true, nocache: false },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white relative min-h-screen`}
       >
-        {/* ✅ Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
             src="/background.jpg"
@@ -79,7 +90,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </div>
 
-        {/* ✅ Client-side animation wrapper */}
         <AnimatedWrapper>{children}</AnimatedWrapper>
       </body>
     </html>
