@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import ProjectsGrid from '../components/Projects/ProjectsGrid';
 import { weatherAppData } from '../data/weather';
+import { informationProjects } from '../data/informationpage';
 
 export default function ProjectsPage() {
   const projects = [
@@ -11,6 +12,7 @@ export default function ProjectsPage() {
       detailsPage: '/projects/weather-app',
       liveDemo: weatherAppData.liveDemo,
     },
+    ...informationProjects,
   ];
 
   return (

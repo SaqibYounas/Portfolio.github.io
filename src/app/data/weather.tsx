@@ -5,7 +5,7 @@ export const projects: {
   description: string;
   image: string;
   detailsPage: string;
-  liveDemo?: string; // optional
+  liveDemo?: string;
 }[] = [
   {
     title: weatherAppData.title,

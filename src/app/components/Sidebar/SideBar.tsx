@@ -1,0 +1,78 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { CarouselProps } from '../../types/sidebar';
+
+export default function Carousel({
+  images,
+  altPrefix = 'Carousel Image',
+}: CarouselProps) {
+  const [current, setCurrent] = useState(0);
+
+  // 🔁 Auto-slide every 3 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  // ⬅️ Previous
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  // ➡️ Next
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <motion.div
+      className="relative mx-auto w-full overflow-hidden rounded-2xl shadow-lg"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <Image
+        src={images[current]}
+        alt={`${altPrefix} ${current + 1}`}
+        width={1200}
+        height={600}
+        className="h-auto w-full rounded-2xl object-cover transition-all duration-700 ease-in-out"
+      />
+
+      {/* Dots indicator */}
+      <div className="absolute right-0 bottom-4 left-0 flex justify-center gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            className={`h-3 w-3 rounded-full ${current === index ? 'bg-blue-500' : 'bg-gray-400'}`}
+          ></button>
+        ))}
+      </div>
+
+      {/* ⬅️ Previous Button */}
+      <button
+        onClick={prevSlide}
+        aria-label="Previous Slide"
+        className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
+      >
+        &#10094;
+      </button>
+
+      {/* ➡️ Next Button */}
+      <button
+        onClick={nextSlide}
+        aria-label="Next Slide"
+        className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
+      >
+        &#10095;
+      </button>
+    </motion.div>
+  );
+}
