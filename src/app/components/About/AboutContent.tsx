@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Linkedin, Mail, MapPin } from 'lucide-react';
-
+import DownloadCV from '../CV/DownloadCV';
 export default function AboutHero() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -73,21 +73,7 @@ export default function AboutHero() {
               continue learning as a Full-Stack Developer Intern.
             </p>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="flex justify-center pt-4 md:justify-start"
-          >
-            <a
-              href="/Muhammad_Saqib_Younas_CV.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 sm:px-6 sm:py-3 sm:text-base"
-            >
-              Download CV
-            </a>
-          </motion.div>
+          <DownloadCV />
         </motion.div>
       </div>
     </section>

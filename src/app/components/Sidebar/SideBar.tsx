@@ -11,7 +11,6 @@ export default function Carousel({
 }: CarouselProps) {
   const [current, setCurrent] = useState(0);
 
-  // 🔁 Auto-slide every 3 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
@@ -19,12 +18,10 @@ export default function Carousel({
     return () => clearInterval(timer);
   }, [images.length]);
 
-  // ⬅️ Previous
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
-  // ➡️ Next
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % images.length);
   };
@@ -44,32 +41,18 @@ export default function Carousel({
         className="h-auto w-full rounded-2xl object-cover transition-all duration-700 ease-in-out"
       />
 
-      {/* Dots indicator */}
-      <div className="absolute right-0 bottom-4 left-0 flex justify-center gap-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            aria-label={`Go to slide ${index + 1}`}
-            className={`h-3 w-3 rounded-full ${current === index ? 'bg-blue-500' : 'bg-gray-400'}`}
-          ></button>
-        ))}
-      </div>
-
-      {/* ⬅️ Previous Button */}
       <button
         onClick={prevSlide}
         aria-label="Previous Slide"
-        className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
+        className="absolute top-1/2 left-2 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
       >
         &#10094;
       </button>
 
-      {/* ➡️ Next Button */}
       <button
         onClick={nextSlide}
         aria-label="Next Slide"
-        className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
+        className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-2 text-white transition hover:bg-black/70"
       >
         &#10095;
       </button>

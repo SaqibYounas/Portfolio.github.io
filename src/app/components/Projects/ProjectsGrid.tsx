@@ -7,15 +7,6 @@ import { ProjectsGridProps } from '../../types/projectgrid';
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <motion.h1
-        className="mb-12 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl"
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        My Projects
-      </motion.h1>
-
       <div className="grid w-full gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
@@ -35,7 +26,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
             </div>
 
             <div className="flex flex-col p-6">
-              <h2 className="mb-3 text-2xl font-semibold text-blue-400">
+              <h2 className="mb-3 text-xl font-semibold text-blue-400">
                 {project.title}
               </h2>
               <p className="mb-4 text-sm break-words text-gray-300">

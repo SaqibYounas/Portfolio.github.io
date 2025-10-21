@@ -2,7 +2,6 @@ import WeatherAppPageClient from '../../components/Projects/weather/WeatherAppPa
 import { weatherAppData } from '../../data/weather-project';
 
 const WeatherAppPage = () => {
-  // Server side: just pass static data
   return <WeatherAppPageClient data={weatherAppData} />;
 };
 

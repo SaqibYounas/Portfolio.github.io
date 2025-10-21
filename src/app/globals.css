@@ -30,3 +30,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), var(--font-geist-mono), sans-serif;
 }
+body {
+  font-family: Arial, sans-serif;
+}
