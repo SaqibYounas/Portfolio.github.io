@@ -1,0 +1,51 @@
+import { ProjectsDataArray } from '../types/codedynamo';
+
+export const projectsData: ProjectsDataArray = [
+  {
+    slug: 'codedynamo-services',
+    title: 'CodeDynamo Service Website',
+    commingsoon: '#',
+    introduction: `This project focuses on the design and development of a role-based service website that provides separate dashboards for clients and administrators...`,
+    problemStatement: `Most software houses in Pakistan rely on contact forms...`,
+    objectives: [
+      'Develop a role-based system with separate dashboards for clients and admins.',
+      'Provide a professional B2B service platform instead of contact forms.',
+      'Implement service request tracking.',
+      'Provide real-time notifications and messaging.',
+      'Introduce digital invoicing.',
+      'Collect feedback from clients.',
+    ],
+    clientScope: [
+      'Dashboard',
+      'Request Service',
+      'My Requests',
+      'Notifications',
+      'Messages',
+      'My Invoices',
+      'Feedback',
+      'My Profile',
+      'Change Password',
+      'Logout',
+    ],
+    adminScope: [
+      'Dashboard',
+      'Manage Users',
+      'All Requests',
+      'Notifications',
+      'Messages',
+      'Generate & Send Invoices',
+      'View Invoices',
+      'View Feedback',
+      'My Profile',
+      'Change Password',
+      'Logout',
+    ],
+    carouselImages: [
+      '/Services-.png',
+      '/Information-2.PNG',
+      '/Information-3.PNG',
+      '/Information-4.PNG',
+      '/Information-5.PNG',
+    ],
+  },
+];

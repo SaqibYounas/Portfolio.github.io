@@ -30,13 +30,13 @@ export const metadata = {
   ],
   creator: 'Muhammad Saqib Younas',
   publisher: 'Muhammad Saqib Younas',
-  metadataBase: new URL('https://your-portfolio-domain.vercel.app'),
+  metadataBase: new URL('https://portfolio-github-io-seven-gamma.vercel.app'),
 
   openGraph: {
     title: 'Muhammad Saqib Younas | Full Stack Developer Portfolio',
     description:
       'Explore the professional portfolio of Muhammad Saqib Younas, a Full Stack Developer specializing in React, Next.js, and Node.js.',
-    url: 'https://your-portfolio-domain.vercel.app',
+    url: 'https://portfolio-github-io-seven-gamma.vercel.app',
     siteName: 'Muhammad Saqib Younas Portfolio',
     images: [
       {
