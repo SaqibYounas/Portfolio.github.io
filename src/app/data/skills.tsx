@@ -1,4 +1,3 @@
-// data/skills.ts
 import {
   FaHtml5,
   FaCss3Alt,
@@ -13,6 +12,11 @@ import {
   FaNetworkWired,
   FaBrain,
   FaCogs,
+  FaGithub,
+  FaGitlab,
+  FaUsers,
+  FaHandshake,
+  FaRegClock,
 } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -36,6 +40,7 @@ import {
   SiTestinglibrary,
   SiMysql,
   SiRailway,
+  SiScrumalliance,
 } from 'react-icons/si';
 import { SkillSection } from '../types/skills';
 
@@ -92,6 +97,8 @@ export const skillSections: SkillSection[] = [
       { name: 'AWS', icon: <FaAws className="text-yellow-400" /> },
       { name: 'Docker', icon: <FaDocker className="text-blue-400" /> },
       { name: 'Git', icon: <FaGitAlt className="text-orange-400" /> },
+      { name: 'GitHub', icon: <FaGithub className="text-black" /> },
+      { name: 'GitLab', icon: <FaGitlab className="text-orange-400" /> },
       {
         name: 'GitHub Actions (CI/CD)',
         icon: <SiGithubactions className="text-white" />,
@@ -114,6 +121,28 @@ export const skillSections: SkillSection[] = [
       },
       { name: 'Jest', icon: <SiJest className="text-red-500" /> },
       { name: 'Postman', icon: <SiPostman className="text-orange-500" /> },
+    ],
+  },
+  {
+    title: 'Methodologies',
+    color: 'from-indigo-400 to-blue-500',
+    skills: [
+      {
+        name: 'Agile Development',
+        icon: <FaUsers className="text-indigo-400" />,
+      },
+      {
+        name: 'Scrum Framework',
+        icon: <SiScrumalliance className="text-blue-500" />,
+      },
+      {
+        name: 'Team Collaboration',
+        icon: <FaHandshake className="text-green-400" />,
+      },
+      {
+        name: 'Time Management',
+        icon: <FaRegClock className="text-yellow-400" />,
+      },
     ],
   },
   {

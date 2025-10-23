@@ -1,7 +1,12 @@
 'use client';
+
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { certificationsData } from '../../data/About/certificateProjects';
 
 export default function CertificationsProjects() {
+  const { certificates, projects } = certificationsData;
+
   return (
     <section className="mx-auto mt-20 w-full max-w-6xl space-y-10 px-4 sm:px-6 lg:px-0">
       <motion.h2
@@ -27,21 +32,31 @@ export default function CertificationsProjects() {
           <h3 className="mb-4 text-left text-xl font-semibold text-blue-400">
             Certifications
           </h3>
-          <ul className="space-y-3 text-gray-300">
-            {[
-              ['SQL (Basic) — HackerRank', '📅 Sep 2025'],
-              ['SQL (Intermediate) — HackerRank', '📅 Sep 2025'],
-              ['CSS (Basic) — HackerRank', '📅 Sep 2025'],
-              ['JavaScript (Basic) — HackerRank', '📅 Oct 2025'],
-            ].map(([title, date], i) => (
+
+          <ul className="space-y-4 text-gray-300">
+            {certificates.map((cert, i) => (
               <li
                 key={i}
-                className="flex flex-wrap items-center justify-between gap-x-2 text-sm sm:text-base"
+                className="flex flex-col gap-3 border-b border-gray-700 pb-3 sm:flex-row sm:items-center sm:justify-between"
               >
-                <span className="truncate">{title}</span>
-                <span className="mt-1 w-full text-[10px] text-gray-500 sm:mt-0 sm:w-auto sm:text-sm">
-                  {date}
-                </span>
+                <div className="flex flex-col">
+                  <p className="text-sm font-medium text-purple-300 sm:text-base">
+                    {cert.title}
+                  </p>
+                  <p className="pt-2 text-xs text-gray-500 sm:text-sm">
+                    {cert.date}
+                  </p>
+                </div>
+
+                <div className="mt-5 flex justify-center sm:justify-start">
+                  <Link
+                    href={cert.pdf}
+                    target="_blank"
+                    className="inline-block rounded-full bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:opacity-90 sm:text-base"
+                  >
+                    View Certificate
+                  </Link>
+                </div>
               </li>
             ))}
           </ul>
@@ -60,25 +75,16 @@ export default function CertificationsProjects() {
           <h3 className="mb-4 text-left text-xl font-semibold text-blue-400">
             Highlighted Projects
           </h3>
+
           <ul className="ml-4 list-disc space-y-3 text-gray-300">
-            <li>
-              <span className="font-semibold text-purple-400">
-                Weather Forecast App:
-              </span>{' '}
-              Built with React.js, Tailwind CSS, and OpenWeather API.
-            </li>
-            <li>
-              <span className="font-semibold text-purple-400">
-                Information Display Page:
-              </span>{' '}
-              Developed using React.js & Bootstrap 5.
-            </li>
-            <li>
-              <span className="font-semibold text-purple-400">
-                Role-Based Service Platform:
-              </span>{' '}
-              Full-stack app using React, Express, MongoDB, Redis, and OAuth.
-            </li>
+            {projects.map((project, i) => (
+              <li key={i}>
+                <span className="font-semibold text-purple-400">
+                  {project.name}:
+                </span>{' '}
+                {project.description}
+              </li>
+            ))}
           </ul>
         </motion.div>
       </div>

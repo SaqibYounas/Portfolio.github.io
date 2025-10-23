@@ -1,4 +1,4 @@
-import WeatherAppPageClient from '../../components/Projects/weather/WeatherAppPage';
+import WeatherAppPageClient from '../../components/Projects/Weather/WeatherAppPage';
 import { weatherAppData } from '../../data/weather-project';
 
 const WeatherAppPage = () => {

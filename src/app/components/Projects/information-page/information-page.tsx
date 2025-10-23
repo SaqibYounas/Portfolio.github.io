@@ -1,19 +1,14 @@
 'use client';
-
 import { motion } from 'framer-motion';
-import Carousel from '../../Sidebar/SideBar'; // ✅ Carousel import
+import Carousel from '../../Sidebar/SideBar';
 import Link from 'next/link';
 import { InfoDisplayProps } from '../../../types/information';
 
-export default function InformationDisplayClient({ data }: InfoDisplayProps) {
-  const carouselImages = [
-    '/Information-1.PNG',
-    '/Information-2.PNG',
-    '/Information-3 .PNG',
-    '/Information-4.PNG',
-    '/Information-5.PNG',
-  ];
-
+export default function InformationDisplayClient({
+  data,
+}: {
+  data: InfoDisplayProps;
+}) {
   return (
     <section className="mx-auto max-w-5xl space-y-12 px-4 py-12 text-white sm:px-6 lg:px-8">
       <motion.h1
@@ -25,7 +20,7 @@ export default function InformationDisplayClient({ data }: InfoDisplayProps) {
         {data.title}
       </motion.h1>
 
-      <Carousel images={carouselImages} altPrefix={data.title} />
+      <Carousel images={data.carouselImages} altPrefix={data.title} />
 
       <motion.div
         className="space-y-4 text-gray-300"
@@ -36,12 +31,7 @@ export default function InformationDisplayClient({ data }: InfoDisplayProps) {
         <h2 className="text-2xl font-semibold text-blue-400 sm:text-3xl">
           Overview
         </h2>
-        <p className="text-sm sm:text-base md:text-lg">
-          This project demonstrates a modern{' '}
-          <strong>Information Display Page</strong> developed using{' '}
-          <strong>React.js</strong> and <strong>Bootstrap 5</strong>. It focuses
-          on a clean and responsive UI with reusable components.
-        </p>
+        <p className="text-sm sm:text-base md:text-lg">{data.description}</p>
       </motion.div>
 
       <motion.div
@@ -54,10 +44,9 @@ export default function InformationDisplayClient({ data }: InfoDisplayProps) {
           Key Highlights
         </h2>
         <ul className="list-inside list-disc space-y-2 text-sm sm:text-base md:text-lg">
-          <li>Clean layout design for easy readability.</li>
-          <li>Responsive structure using Bootstrap Grid.</li>
-          <li>Reusable component-based architecture.</li>
-          <li>Optimized build using Vite.</li>
+          {data.features.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       </motion.div>
 
@@ -71,10 +60,9 @@ export default function InformationDisplayClient({ data }: InfoDisplayProps) {
           Tech Stack
         </h2>
         <ul className="list-inside list-disc space-y-2 text-sm sm:text-base md:text-lg">
-          <li>React.js</li>
-          <li>Bootstrap 5</li>
-          <li>Vite</li>
-          <li>CSS Animations</li>
+          {data.techStack.map((tech, i) => (
+            <li key={i}>{tech}</li>
+          ))}
         </ul>
       </motion.div>
 
@@ -96,6 +84,7 @@ export default function InformationDisplayClient({ data }: InfoDisplayProps) {
         </Link>
       </motion.div>
 
+      {/* Back Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
