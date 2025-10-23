@@ -9,7 +9,7 @@ interface Props {
   data: WeatherAppData;
 }
 
-const WeatherAppPageClient: React.FC<Props> = ({ data }) => {
+export const WeatherAppPageClient: React.FC<Props> = ({ data }) => {
   return (
     <section className="mx-auto max-w-5xl space-y-12 px-4 py-12 sm:px-6 lg:px-8">
       <motion.h1
@@ -131,5 +131,3 @@ const WeatherAppPageClient: React.FC<Props> = ({ data }) => {
     </section>
   );
 };
-
-export default WeatherAppPageClient;

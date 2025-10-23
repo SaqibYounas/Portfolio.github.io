@@ -4,11 +4,7 @@ import Carousel from '../../Sidebar/SideBar';
 import Link from 'next/link';
 import { InfoDisplayProps } from '../../../types/information';
 
-export default function InformationDisplayClient({
-  data,
-}: {
-  data: InfoDisplayProps;
-}) {
+export function InformationDisplayClient({ data }: { data: InfoDisplayProps }) {
   return (
     <section className="mx-auto max-w-5xl space-y-12 px-4 py-12 text-white sm:px-6 lg:px-8">
       <motion.h1
