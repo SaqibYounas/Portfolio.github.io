@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { contactInfo, socialLinks } from '../../data/contractlinks';
+import { contactInfo, socialLinks } from '../../data/other/contractlinks';
 import Link from 'next/link';
 
 const ContactInfo: React.FC = () => (

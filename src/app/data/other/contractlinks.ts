@@ -1,5 +1,5 @@
 import { LinkedinIcon, GithubIcon, MailIcon, PhoneIcon } from 'lucide-react';
-import { ContactInfoType, SocialLinkType } from '../types/contract';
+import { ContactInfoType, SocialLinkType } from '../../types/other/contract';
 
 export const contactInfo: ContactInfoType = {
   phone: '+92 342 0339016',

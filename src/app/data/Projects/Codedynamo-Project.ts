@@ -1,4 +1,4 @@
-import { ProjectsDataArray } from '../types/codedynamo';
+import { ProjectsDataArray } from '../../types/Projects/codedynamo';
 
 export const projectsData: ProjectsDataArray = [
   {
@@ -41,7 +41,7 @@ export const projectsData: ProjectsDataArray = [
       'Logout',
     ],
     carouselImages: [
-      '/Services-.png',
+      '/Projects/Codedynamo/Services-.png',
       '/Information-2.PNG',
       '/Information-3.PNG',
       '/Information-4.PNG',

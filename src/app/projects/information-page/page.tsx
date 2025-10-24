@@ -1,5 +1,5 @@
 import { InformationDisplayClient } from '../../components/Projects/Information-page/Information';
-import { informationProjects } from '../../data/informationpage';
+import { informationProjects } from '../../data/Projects/informationpage';
 
 export default function InformationDisplayPage() {
   const projectData = informationProjects[0];

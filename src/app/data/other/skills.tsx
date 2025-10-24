@@ -42,7 +42,7 @@ import {
   SiRailway,
   SiScrumalliance,
 } from 'react-icons/si';
-import { SkillSection } from '../types/skills';
+import { SkillSection } from '../../types/other/skills';
 
 export const skillSections: SkillSection[] = [
   {

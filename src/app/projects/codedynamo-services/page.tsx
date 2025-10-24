@@ -1,20 +1,21 @@
-import { projectsData } from '../../data/Codedynamo-Project';
-import InformationDisplayClient from '../../components/Projects/CodedynamoProject/CodeDynamo';
-
+import { projectsData } from '../../data/Projects/Codedynamo-Project';
+import RoleBasedProjectClient from '../../components/Projects/CodedynamoProject/CodeDynamo';
 interface ProjectPageProps {
   params: { slug: string };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projectsData.find((p) => p.slug === params.slug);
+export default function RoleBasedProjectPage({ params }: ProjectPageProps) {
+  const project = projectsData.find(
+    (p: { slug: string }) => p.slug === params.slug
+  );
 
   if (!project) {
     return (
       <div className="flex min-h-screen items-center justify-center text-2xl text-white">
-        Comming Soon...
+        Coming Soon...
       </div>
     );
   }
 
-  return <InformationDisplayClient data={project} />;
+  return <RoleBasedProjectClient data={project} />;
 }

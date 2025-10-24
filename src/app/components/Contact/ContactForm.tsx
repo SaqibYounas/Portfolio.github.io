@@ -1,15 +1,16 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { validateForm } from './utils/validation';
 
 const ContactForm: React.FC = () => {
-  // 🔹 states
   const [formData, setFormData] = useState({
     name: '',
     subject: '',
     email: '',
     message: '',
   });
+
   const [loading, setLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState<{
     type: 'success' | 'error';
@@ -19,17 +20,20 @@ const ContactForm: React.FC = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.placeholder.toLowerCase().replace(' ', '')]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // 🔹 submit handler
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setResponseMsg(null);
+
+    const validationError = validateForm(formData);
+    if (validationError) {
+      setResponseMsg({ type: 'error', text: validationError });
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch('/api/send', {
@@ -40,22 +44,16 @@ const ContactForm: React.FC = () => {
 
       const data = await res.json();
 
-      if (res.ok) {
-        setResponseMsg({
-          type: 'success',
-          text: '✅ Message sent successfully!',
-        });
-        setFormData({ name: '', subject: '', email: '', message: '' });
+      if (!res.ok) {
+        setResponseMsg({ type: 'error', text: data.error });
       } else {
-        setResponseMsg({
-          type: 'error',
-          text: `❌ ${data.error || 'Something went wrong.'}`,
-        });
+        setResponseMsg({ type: 'success', text: data.message });
+        setFormData({ name: '', subject: '', email: '', message: '' });
       }
     } catch (error) {
       setResponseMsg({
         type: 'error',
-        text: '❌ Failed to send message. Please try again later.',
+        text: 'Something went wrong. Please try again later.',
       });
     } finally {
       setLoading(false);
@@ -78,58 +76,61 @@ const ContactForm: React.FC = () => {
         projects or creative ideas.
       </p>
 
-      {/* Inputs */}
       <div className="grid gap-4 md:grid-cols-2">
         <input
           type="text"
+          name="name"
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           required
+          className="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
         />
         <input
           type="text"
+          name="subject"
           placeholder="Subject"
           value={formData.subject}
           onChange={handleChange}
-          className="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
           required
+          className="w-full rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
         />
       </div>
 
       <input
         type="email"
+        name="email"
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        className="mt-4 w-full rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
         required
+        className="mt-4 w-full rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
       />
 
       <textarea
+        name="message"
         placeholder="Message"
         rows={5}
         value={formData.message}
         onChange={handleChange}
-        className="mt-4 w-full resize-none rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
         required
+        className="mt-4 w-full resize-none rounded-lg border border-gray-600 bg-gray-700 p-3 focus:ring-2 focus:ring-purple-500 focus:outline-none"
       ></textarea>
 
-      {/* Button */}
       <motion.button
         type="submit"
         disabled={loading}
         whileHover={!loading ? { scale: 1.05 } : {}}
         whileTap={!loading ? { scale: 0.95 } : {}}
-        className={`mt-6 w-full cursor-pointer rounded-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 font-semibold text-white shadow-lg transition ${
-          loading ? 'cursor-not-allowed opacity-50' : 'hover:opacity-90'
+        className={`mt-6 w-full rounded-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 font-semibold text-white shadow-lg transition cursor-pointer${
+          loading
+            ? 'cursor-not-allowed opacity-50'
+            : 'cursor-pointer hover:opacity-90'
         }`}
       >
         {loading ? 'Sending...' : 'Send Message →'}
       </motion.button>
 
-      {/* Response message */}
       {responseMsg && (
         <p
           className={`mt-4 text-center text-sm ${

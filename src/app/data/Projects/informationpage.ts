@@ -1,4 +1,4 @@
-import { InfoDisplayProps } from '../types/information';
+import { InfoDisplayProps } from '../../types/Projects/information';
 
 export const informationProjects: InfoDisplayProps[] = [
   {
@@ -17,14 +17,14 @@ export const informationProjects: InfoDisplayProps[] = [
     techStack: ['React.js', 'Bootstrap 5', 'Vite', 'CSS Animations'],
 
     carouselImages: [
-      '/Information-1.PNG',
-      '/Information-2.PNG',
-      '/Information-3 .PNG',
-      '/Information-4.PNG',
-      '/Information-5.PNG',
+      '/Projects/Information-Page/Information-1.PNG',
+      '/Projects/Information-Page/Information-2.PNG',
+      '/Projects/Information-Page/Information-3 .PNG',
+      '/Projects/Information-Page/Information-4.PNG',
+      '/Projects/Information-Page/Information-5.PNG',
     ],
 
     liveDemo: 'https://saqibyounas.github.io/mrbigbullofficial.github.io',
-    image: '/Information-1.PNG',
+    image: '/Projects/Information-Page/Information-1.PNG',
   },
 ];

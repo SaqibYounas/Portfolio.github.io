@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Carousel from '../../Sidebar/SideBar';
 import Link from 'next/link';
-import { InfoDisplayProps } from '../../../types/information';
+import { InfoDisplayProps } from '../../../types/Projects/information';
 
 export function InformationDisplayClient({ data }: { data: InfoDisplayProps }) {
   return (
@@ -74,13 +74,12 @@ export function InformationDisplayClient({ data }: { data: InfoDisplayProps }) {
         <Link
           href={data.liveDemo}
           target="_blank"
-          className="text-sm break-all text-green-400 underline hover:text-purple-400 sm:text-base md:text-lg"
+          className="text-sm break-all text-blue-400 underline hover:text-purple-400 sm:text-base md:text-lg"
         >
           {data.liveDemo}
         </Link>
       </motion.div>
 
-      {/* Back Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

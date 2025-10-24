@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import type { WeatherAppData } from '../../../types/weather';
+import type { WeatherAppData } from '../../../types/Projects/weather';
 
 interface Props {
   data: WeatherAppData;
