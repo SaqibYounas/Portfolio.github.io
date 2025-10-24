@@ -1,5 +1,5 @@
-import Header from './components/Header';
-import HeroSection from './components/HomePage';
+import Header from './components/Navbar/Header';
+import HeroSection from './components/HomePage/HomePage';
 
 export default function Home() {
   return (

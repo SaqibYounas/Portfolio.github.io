@@ -1,4 +1,4 @@
-import { PortfolioData } from '../types/portfolio';
+import { PortfolioData } from '../../types/Projects/portfolio';
 
 export const portfolioData: PortfolioData = {
   codedynamo: 'personal-portfolio',

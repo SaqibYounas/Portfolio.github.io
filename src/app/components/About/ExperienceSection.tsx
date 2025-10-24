@@ -26,27 +26,40 @@ export default function ExperienceSection() {
             transition={{ type: 'spring', stiffness: 300, damping: 15 }}
             className="rounded-2xl border border-gray-700 bg-gray-800/50 p-5 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-purple-500 hover:bg-cyan-500/10 sm:p-6"
           >
-            <h3 className="text-lg font-semibold text-blue-400 sm:text-xl">
-              {exp.role}
-            </h3>
-            <p className="mb-1 text-sm text-gray-400">{exp.company}</p>
-            <p className="mb-1 text-xs text-gray-500">📍 {exp.location}</p>
-            <p className="mb-3 text-xs text-gray-500">📅 {exp.duration}</p>
+            <div className="mb-3 border-b border-gray-700 pb-3">
+              <h3 className="text-lg font-semibold text-blue-400 sm:text-xl">
+                {exp.role}
+              </h3>
+              <p className="text-sm text-gray-300">{exp.company}</p>
 
-            <ul className="ml-4 list-disc space-y-2 text-sm text-gray-300 sm:ml-5">
+              <div className="mt-2 space-y-1">
+                <div className="flex items-center gap-2 text-xs text-gray-300">
+                  <span>📍</span>
+                  <span>{exp.location}</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-300">
+                  <span>📅</span>
+                  <span>{exp.duration}</span>
+                </div>
+              </div>
+            </div>
+
+            <ul className="mb-3 ml-4 list-disc space-y-2 border-b border-gray-700 pb-3 text-gray-300 sm:ml-5">
               {exp.details.map((detail, i) => (
                 <li key={i}>{detail}</li>
               ))}
             </ul>
 
-            <p className="mt-4 text-sm text-gray-400">
-              <span className="font-semibold text-purple-400">
-                Technologies Used:
-              </span>{' '}
-              {exp.technologies}
-            </p>
+            <div className="mb-3 border-b border-gray-700 pb-3">
+              <p className="text-sm text-gray-400">
+                <span className="font-semibold text-purple-400">
+                  Technologies Used:
+                </span>{' '}
+                {exp.technologies}
+              </p>
+            </div>
 
-            <div className="mt-5 flex justify-center sm:justify-start">
+            <div className="mt-4 flex justify-center sm:justify-start">
               <Link
                 href={exp.certificate}
                 target="_blank"

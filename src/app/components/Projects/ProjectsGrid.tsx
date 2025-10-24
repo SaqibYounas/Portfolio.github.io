@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProjectsGridProps } from '../../types/projectgrid';
+import { ProjectsGridProps } from '../../types/Projects/projectgrid';
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
   return (

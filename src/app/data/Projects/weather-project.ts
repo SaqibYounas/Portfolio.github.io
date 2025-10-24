@@ -1,4 +1,4 @@
-import type { WeatherAppData } from '../types/weather';
+import type { WeatherAppData } from '../../types/Projects/weather';
 
 export const weatherAppData: WeatherAppData = {
   title: 'Weather App',

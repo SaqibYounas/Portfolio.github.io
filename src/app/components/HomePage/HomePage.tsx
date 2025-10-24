@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { socialLinks } from '../data/contractlinks';
+import { socialLinks } from '../../data/other/contractlinks';
 
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);

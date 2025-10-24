@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { CarouselProps } from '../../types/sidebar';
+import { CarouselProps } from '../../types/other/sidebar';
 
 export default function Carousel({
   images,

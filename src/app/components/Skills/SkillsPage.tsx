@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { SkillsClientProps } from '../../types/skills';
+import type { SkillsClientProps } from '../../types/other/skills';
 
 export default function SkillsClient({ skillSections }: SkillsClientProps) {
   return (

@@ -1,6 +1,6 @@
-import Header from '../components/Header';
+import Header from '../components/Navbar/Header';
 import SkillsClient from '../components/Skills/SkillsPage';
-import { skillSections } from '../data/skills';
+import { skillSections } from '../data/other/skills';
 
 export default function SkillsPage() {
   return (

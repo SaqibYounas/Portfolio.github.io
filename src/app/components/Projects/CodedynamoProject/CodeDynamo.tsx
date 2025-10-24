@@ -6,13 +6,9 @@ import {
   ProjectData,
   SectionProps,
   ListSectionProps,
-} from '../../../types/codedynamo';
+} from '../../../types/Projects/codedynamo';
 
-export default function InformationDisplayClient({
-  data,
-}: {
-  data: ProjectData;
-}) {
+export default function RoleBasedProject({ data }: { data: ProjectData }) {
   return (
     <section className="mx-auto max-w-6xl space-y-12 px-4 py-12 text-white sm:px-6 lg:px-8">
       <motion.h1

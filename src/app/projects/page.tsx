@@ -1,9 +1,9 @@
-import Header from '../components/Header';
+import Header from '../components/Navbar/Header';
 import ProjectsGrid from '../components/Projects/ProjectsGrid';
-import { weatherAppData } from '../data/weather';
-import { informationProjects } from '../data/informationpage';
-import { projectsData } from '../data/Codedynamo-Project';
-import { portfolioData } from '../data/portfolio';
+import { weatherAppData } from '../data/Projects/weather';
+import { informationProjects } from '../data/Projects/informationpage';
+import { projectsData } from '../data/Projects/Codedynamo-Project';
+import { portfolioData } from '../data/Projects/portfolio';
 
 export default function ProjectsPage() {
   const projects = [

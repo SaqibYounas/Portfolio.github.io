@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function DownloadCV() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Muhammad Saqib Younas Full-Stack-Developer.pdf';
+    link.href = '/CV/Muhammad Saqib Younas Full-Stack-Developer.pdf';
     link.download = 'Muhammad Saqib Younas Full-Stack-Developer.pdf';
     link.click();
   };
