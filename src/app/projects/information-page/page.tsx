@@ -1,4 +1,4 @@
-import { InformationDisplayClient } from '../../components/Projects/Information-page/information-page';
+import { InformationDisplayClient } from '../../components/Projects/Information-page/Information';
 import { informationProjects } from '../../data/informationpage';
 
 export default function InformationDisplayPage() {
