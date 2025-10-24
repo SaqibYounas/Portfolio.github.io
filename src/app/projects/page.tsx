@@ -3,6 +3,7 @@ import ProjectsGrid from '../components/Projects/ProjectsGrid';
 import { weatherAppData } from '../data/weather';
 import { informationProjects } from '../data/informationpage';
 import { projectsData } from '../data/Codedynamo-Project';
+import { portfolioData } from '../data/portfolio';
 
 export default function ProjectsPage() {
   const projects = [
@@ -13,13 +14,26 @@ export default function ProjectsPage() {
       detailsPage: '/projects/weather-app',
       liveDemo: weatherAppData.liveDemo,
     },
-    ...informationProjects,
+    ...informationProjects.map((proj) => ({
+      title: proj.title,
+      description: proj.description,
+      image: proj.carouselImages?.[0] || '',
+      detailsPage: `/projects/${proj.name}`,
+      liveDemo: proj.liveDemo,
+    })),
     {
       title: projectsData[0].title,
       description: projectsData[0].introduction,
       image: projectsData[0].carouselImages[0],
       detailsPage: `/projects/${projectsData[0].slug}`,
       comming: projectsData[0].commingsoon,
+    },
+    {
+      title: portfolioData.title,
+      description: portfolioData.introduction,
+      image: portfolioData.carouselImages[0],
+      detailsPage: '/projects/portfolio',
+      comming: portfolioData.commingsoon,
     },
   ];
 

@@ -20,7 +20,7 @@ export default function AnimatedWrapper({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className="min-h-screen w-full" // 👈 absolute hata do
+          className="min-h-screen w-full"
         >
           {children}
         </motion.div>

@@ -1,5 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
+import {
+  educationData,
+  skillCategories,
+} from '../../data/About/educationSkills';
 
 export default function EducationSkillsSection() {
   return (
@@ -14,6 +18,7 @@ export default function EducationSkillsSection() {
       </motion.h2>
 
       <div className="grid gap-10 md:grid-cols-2">
+        {/* 🎓 Education Card */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,17 +30,17 @@ export default function EducationSkillsSection() {
           className="rounded-2xl border border-gray-700 bg-gray-800/50 p-6 text-gray-300 shadow-lg backdrop-blur-md transition-all duration-500 hover:border-purple-500 hover:bg-cyan-500/10"
         >
           <h3 className="text-xl font-semibold text-blue-400">
-            Bachelor&apos;s Degree in Information Technology (BSIT) — In
-            Progress
+            {educationData.degree}
           </h3>
-          <p className="mt-1 text-gray-400">The Superior University, Lahore</p>
+          <p className="mt-1 text-gray-400">{educationData.institution}</p>
 
           <div className="mt-3 text-sm text-gray-500">
-            <p>📅 2023 – 2027</p>
-            <p>📍 Lahore, Pakistan</p>
+            <p>📅 {educationData.duration}</p>
+            <p>📍 {educationData.location}</p>
           </div>
         </motion.div>
 
+        {/* 🧠 Skills Card */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,26 +55,14 @@ export default function EducationSkillsSection() {
             Technical Skills
           </h3>
 
-          <p>
-            <span className="font-semibold text-purple-400">Frontend:</span>{' '}
-            React.js, Next.js, Tailwind CSS, Bootstrap 5
-          </p>
-          <p>
-            <span className="font-semibold text-purple-400">Backend:</span>{' '}
-            Node.js, Express.js, REST APIs, GraphQL
-          </p>
-          <p>
-            <span className="font-semibold text-purple-400">Databases:</span>{' '}
-            PostgreSQL, MongoDB, Redis
-          </p>
-          <p>
-            <span className="font-semibold text-purple-400">Tools:</span>{' '}
-            Docker, Git, AWS, Vercel, Render
-          </p>
-          <p>
-            <span className="font-semibold text-purple-400">Testing:</span>{' '}
-            Jest, Vitest, Postman, RTL
-          </p>
+          {skillCategories.map((category, index) => (
+            <p key={index}>
+              <span className="font-semibold text-purple-400">
+                {category.title}:
+              </span>{' '}
+              {category.items.join(', ')}
+            </p>
+          ))}
         </motion.div>
       </div>
     </section>

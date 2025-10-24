@@ -1,8 +1,10 @@
 export interface InfoDisplayProps {
-  data: {
-    title: string;
-    image: string;
-    liveDemo: string;
-    description: { text: string }[];
-  };
+  name: string;
+  title: string;
+  description: string;
+  features: string[];
+  techStack: string[];
+  carouselImages: string[];
+  liveDemo: string;
+  image: string;
 }

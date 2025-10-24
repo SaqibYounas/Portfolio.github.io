@@ -1,10 +1,10 @@
-// src/types/projectgrid.ts
 export interface Project {
   title: string;
   description: string;
   image: string;
-  detailsPage?: string;
+  detailsPage: string;
   liveDemo?: string;
+  comming?: string;
 }
 
 export interface ProjectsGridProps {
