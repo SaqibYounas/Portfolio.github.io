@@ -37,5 +37,10 @@ export const certificationsData: CertificationsData = {
       description:
         'Full-stack app using React, Express, MongoDB, Redis, and OAuth.',
     },
+    {
+      name: 'Personal Portfolio Website (v1.0)',
+      description:
+        'Modern responsive portfolio built with Next.js and Tailwind CSS to showcase my full stack skills.',
+    },
   ],
 };

@@ -38,30 +38,13 @@ export const metadata = {
       'Explore the professional portfolio of Muhammad Saqib Younas, a Full Stack Developer specializing in React, Next.js, and Node.js.',
     url: 'https://portfolio-github-io-seven-gamma.vercel.app',
     siteName: 'Muhammad Saqib Younas Portfolio',
-    images: [
-      {
-        url: '/profile.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Muhammad Saqib Younas - Full Stack Developer Portfolio',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
-
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Muhammad Saqib Younas | Full Stack Developer Portfolio',
-    description:
-      'Full Stack Developer based in Lahore — experienced in React.js, Next.js, Node.js, and modern web technologies.',
-    images: ['/profile.jpg'],
-  },
-
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/Favicon.ico',
+    shortcut: '/Favicon.ico',
+    apple: '/Favicon.ico',
   },
 
   category: 'Portfolio',
