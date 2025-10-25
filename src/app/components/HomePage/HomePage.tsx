@@ -1,24 +1,9 @@
 'use client';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { socialLinks } from '../../data/other/contractlinks';
 
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="flex h-screen w-full items-center justify-center bg-gray-900 text-white">
-        Loading...
-      </div>
-    );
-  }
-
   return (
     <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gray-900 px-4 text-center sm:px-6 md:px-10">
       <motion.h1

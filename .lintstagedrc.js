@@ -1,17 +1,26 @@
+
 import { relative } from 'path';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const buildEslintCommand = (filenames) =>
   `next lint --fix --file ${filenames
     .map((f) => relative(process.cwd(), f))
     .join(' --file ')}`;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const buildPrettierCommand = (filenames) =>
   `prettier --write ${filenames.join(' ')}`;
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  '*.{js,jsx,ts,tsx}': ['eslint --fix', 'prettier --write'],
+  // Source code files
+  'src/**/*.{js,jsx,ts,tsx}': (filenames) => [
+    `eslint --fix ${filenames.join(' ')}`,
+    `prettier --write ${filenames.join(' ')}`,
+  ],
+
+  // Test files only
+  '**/*.test.{js,ts,jsx,tsx}': (filenames) => [
+    `prettier --write ${filenames.join(' ')}`,
+  ],
+
+  // Other formats
   '*.{json,css,scss,md}': ['prettier --write'],
 };

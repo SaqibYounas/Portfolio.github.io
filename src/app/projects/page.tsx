@@ -2,7 +2,7 @@ import Header from '../components/Navbar/Header';
 import ProjectsGrid from '../components/Projects/ProjectsGrid';
 import { weatherAppData } from '../data/Projects/weather';
 import { informationProjects } from '../data/Projects/informationpage';
-import { projectsData } from '../data/Projects/Codedynamo-Project';
+import { projectsData } from '../data/Projects/codedynamo-poject';
 import { portfolioData } from '../data/Projects/portfolio';
 
 export default function ProjectsPage() {

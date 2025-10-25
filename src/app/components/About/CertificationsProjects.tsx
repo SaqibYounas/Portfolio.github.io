@@ -38,6 +38,7 @@ export default function CertificationsProjects() {
               {certificates.map((cert, i) => (
                 <li
                   key={i}
+                  data-testid={`cert-${i}`}
                   className="flex flex-col gap-3 border-b border-gray-700 pb-3 sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div className="flex flex-col">
