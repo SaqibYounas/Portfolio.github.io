@@ -21,7 +21,7 @@ export const weatherAppData: WeatherAppData = {
     'const geoCodeUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${debouncedInput}&count=10&language=en&format=json`;',
     'const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode,sunrise,sunset&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,weathercode,precipitation_probability,apparent_temperature,uv_index&timezone=auto&forecast_days=7`;',
   ],
-  image: '/Weather-App.PNG',
+  image: '/Projects/Weather-app/Weather-App.PNG',
   liveDemo: 'https://saqibyounas.github.io/weather.github.io/',
   shortDescription:
     'Users can search any city and get real-time weather info like temperature, humidity, wind speed, UV index, and real feel temperature.',

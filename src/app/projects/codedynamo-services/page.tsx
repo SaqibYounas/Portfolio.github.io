@@ -1,4 +1,4 @@
-import { projectsData } from '../../data/Projects/Codedynamo-Project';
+import { projectsData } from '../../data/Projects/codedynamo-poject';
 import RoleBasedProjectClient from '../../components/Projects/CodedynamoProject/CodeDynamo';
 interface ProjectPageProps {
   params: { slug: string };

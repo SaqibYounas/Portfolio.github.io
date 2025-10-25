@@ -60,9 +60,11 @@ export const portfolioData: PortfolioData = {
   ],
 
   carouselImages: [
-    '/Portfolio Images/Portfolio-1.PNG',
-    '/Portfolio Images/Portfolio-2.PNG',
-    '/Portfolio Images/Portfolio-3.PNG',
-    '/Portfolio Images/Portfolio-4.PNG',
+    '/Projects/Portfolio Images/Portfolio-1.PNG',
+    '/Projects/Portfolio Images/Portfolio-2.PNG',
+    '/Projects/Portfolio Images/Portfolio-3.PNG',
+    '/Projects/Portfolio Images/Portfolio-4.PNG',
+    '/Projects/Portfolio Images/Portfolio-5.PNG',
+    '/Projects/Portfolio Images/Portfolio-6.PNG',
   ],
 };

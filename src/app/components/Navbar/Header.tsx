@@ -57,7 +57,6 @@ const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-white transition-all duration-300 hover:opacity-80 focus:outline-none md:hidden"
@@ -67,8 +66,8 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       <div
+        data-testid="mobile-menu"
         className={`fixed top-16 right-0 w-48 rounded-l-lg border-l border-gray-700 bg-gray-900 shadow-lg transition-transform duration-500 ease-in-out md:hidden ${
           isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
@@ -83,6 +82,7 @@ const Header: React.FC = () => {
               <li key={item.name}>
                 <Link
                   href={item.href}
+                  data-testid={`desktop-link-${item.name.toLowerCase()}`}
                   className={`flex items-center gap-3 rounded-md px-5 py-2 transition-all duration-300 ${
                     isActive
                       ? 'bg-gray-800 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent'
