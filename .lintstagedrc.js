@@ -1,26 +1,18 @@
-
 import { relative } from 'path';
 
-const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${filenames
-    .map((f) => relative(process.cwd(), f))
-    .join(' --file ')}`;
-
-const buildPrettierCommand = (filenames) =>
-  `prettier --write ${filenames.join(' ')}`;
-
 export default {
-  // Source code files
+  // Source code files (lint + prettier)
   'src/**/*.{js,jsx,ts,tsx}': (filenames) => [
-    `eslint --fix ${filenames.join(' ')}`,
-    `prettier --write ${filenames.join(' ')}`,
+    `prettier --write ${filenames.map((f) => `"${f}"`).join(' ')}`,
   ],
 
-  // Test files only
+  // Test files only (prettier, no ESLint)
   '**/*.test.{js,ts,jsx,tsx}': (filenames) => [
-    `prettier --write ${filenames.join(' ')}`,
+    `prettier --write ${filenames.map((f) => `"${f}"`).join(' ')}`,
   ],
 
   // Other formats
-  '*.{json,css,scss,md}': ['prettier --write'],
+  '*.{json,css,scss,md}': (filenames) => [
+    `prettier --write ${filenames.map((f) => `"${f}"`).join(' ')}`,
+  ],
 };
