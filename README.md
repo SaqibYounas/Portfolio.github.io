@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio Website (v1.0)
 
-## Getting Started
+[Live Demo](https://portfolio-github-io-seven-gamma.vercel.app/projects)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is my personal developer portfolio website — a modern, fully responsive platform built using **Next.js** and **Tailwind CSS**. It showcases my journey as a **Full Stack Developer**, featuring my projects, technical skills, resume, and contact information in a visually engaging and performant design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Problem Statement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Many developers struggle to present their work in a professional, scalable, and SEO-friendly way. Static portfolios often lack interactivity, performance optimization, and proper deployment pipelines for continuous updates.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Objectives
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Build a dynamic and scalable portfolio using **Next.js App Router**.
+- Ensure **SEO optimization** and rich metadata for social sharing.
+- Implement smooth **animations** using **Framer Motion**.
+- Make it **responsive** across all device sizes.
+- Deploy using **CI/CD pipelines** for continuous updates.
+- Integrate **Docker** for consistent development environments.
+- Add **unit and integration testing** using **Jest** and **React Testing Library**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Fully responsive and modern UI using **Tailwind CSS**.
+- **SEO optimized** with Open Graph and Twitter cards.
+- **Dynamic project pages** using static generation (SSG).
+- Smooth **animations** powered by **Framer Motion**.
+- Dark/light mode ready with system preference detection.
+- **Dockerized** setup for easy deployment and scaling.
+- **CI/CD pipeline** implemented with GitHub Actions and Vercel.
+- Code quality tools: **ESLint**, **Prettier**, and **Husky** for pre-commit checks.
+- **Unit testing** configured with Jest and React Testing Library.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tech Stack
+
+- **Next.js 15** (App Router)
+- **React.js 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Docker**
+- **Jest**
+- **React Testing Library**
+- **Prettier**
+- **ESLint**
+- **Husky**
+- **GitHub Actions (CI/CD)**
+- **Vercel Deployment**
+
+---
+
+## Version Control
+
+**Current Version:** 1.0
+
+**Planned Future Updates (v1.1):**
+
+- Add blog section
+- Integrate contact form with backend API
+- Add multilingual support
+- Improve accessibility and performance score
+
+---
+
+## Deployment
+
+The website is deployed on **Vercel** for fast and scalable hosting.
+
+[View Live Portfolio](https://portfolio-github-io-seven-gamma.vercel.app/projects)
+
+---
+
+## Contact
+
+For inquiries, collaborations, or freelance work, you can reach out via the contact form on the website or connect through my social media links provided in the portfolio.
+
+---
+
+**Note:** This is my personal portfolio project and is not open-source.
