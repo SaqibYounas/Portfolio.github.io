@@ -1,0 +1,43 @@
+name: Run Jest Tests
+
+on:
+  push:
+    branches: [main, home]
+  pull_request:
+    branches: [main, home]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Jest environment
+        run: echo "JEST_JSDOM environment enabled for testing"
+
+      - name: Run Jest Tests
+        run: |
+          mkdir -p logs
+          npm run test -- --coverage --watchAll=false 2>&1 | tee logs/jest.log
+
+      - name: Upload Jest logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: jest-logs
+          path: logs/jest.log
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jest-coverage
+          path: coverage/
