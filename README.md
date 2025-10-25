@@ -1,6 +1,6 @@
 # Personal Portfolio Website (v1.0)
 
-[Live Demo](https://portfolio-github-io-seven-gamma.vercel.app/projects)
+[Live Demo](https://portfolio-github-io-seven-gamma.vercel.app)
 
 ## Overview
 
@@ -75,7 +75,7 @@ Many developers struggle to present their work in a professional, scalable, and 
 
 The website is deployed on **Vercel** for fast and scalable hosting.
 
-[View Live Portfolio](https://portfolio-github-io-seven-gamma.vercel.app/projects)
+[View Live Portfolio](https://portfolio-github-io-seven-gamma.vercel.app)
 
 ---
 
