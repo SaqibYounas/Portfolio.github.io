@@ -28,15 +28,17 @@ describe('CertificationsProjects Component', () => {
       expect(certItem).toHaveTextContent(cert.date);
     });
   });
-
   it('renders all projects', () => {
     certificationsData.projects.forEach((project) => {
-      expect(
-        screen.getByText(new RegExp(project.name, 'i'))
-      ).toBeInTheDocument();
-      expect(
-        screen.getByText(new RegExp(project.description, 'i'))
-      ).toBeInTheDocument();
+      const projectItem = screen
+        .getAllByRole('listitem')
+        .find(
+          (li) =>
+            li.textContent?.includes(project.name) &&
+            li.textContent?.includes(project.description)
+        );
+
+      expect(projectItem).toBeInTheDocument();
     });
   });
 });

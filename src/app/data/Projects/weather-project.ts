@@ -24,5 +24,5 @@ export const weatherAppData: WeatherAppData = {
   image: '/Projects/Weather-app/Weather-App.PNG',
   liveDemo: 'https://saqibyounas.github.io/weather.github.io/',
   shortDescription:
-    'Users can search any city and get real-time weather info like temperature, humidity, wind speed, UV index, and real feel temperature.',
+    'Users can search any city and get real time weather info like temperature, humidity, wind speed, UV index, and real feel temperature.',
 };

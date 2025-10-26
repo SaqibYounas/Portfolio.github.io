@@ -5,7 +5,7 @@ export const portfolioData: PortfolioData = {
   title: 'Personal Portfolio Website (v1.0)',
   commingsoon: '#',
 
-  introduction: `This is my personal developer portfolio website — a modern, fully responsive platform built using Next.js and Tailwind CSS. 
+  introduction: `This is my personal developer portfolio website a modern, fully responsive platform built using Next.js and Tailwind CSS. 
   It showcases my journey as a Full Stack Developer, featuring my projects, technical skills, resume, and contact information in a visually engaging and performant design.`,
 
   problemStatement: `Many developers struggle to present their work in a professional, scalable, and SEO-friendly way. 
@@ -35,12 +35,7 @@ export const portfolioData: PortfolioData = {
 
   versionControl: {
     currentVersion: '1.0',
-    futureUpdates: [
-      'Add blog section (planned v1.1)',
-      'Integrate contact form with backend API',
-      'Add multilingual support',
-      'Improve accessibility and performance score',
-    ],
+    futureUpdates: [],
   },
 
   techStack: [

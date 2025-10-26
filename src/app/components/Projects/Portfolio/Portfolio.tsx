@@ -32,7 +32,9 @@ export default function PortfolioDisplayClient({
         <h2 className="text-2xl font-semibold text-blue-400 sm:text-3xl">
           Introduction
         </h2>
-        <p className="text-sm sm:text-base md:text-lg">{data.introduction}</p>
+        <p className="text-sm leading-relaxed sm:text-base sm:leading-relaxed md:text-lg md:leading-relaxed">
+          {data.introduction}
+        </p>
       </motion.div>
 
       <motion.div
@@ -41,7 +43,7 @@ export default function PortfolioDisplayClient({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <h2 className="text-2xl font-semibold text-blue-400 sm:text-3xl">
+        <h2 className="text-2xl leading-relaxed font-semibold text-blue-400 sm:text-3xl">
           Problem Statement
         </h2>
         <p className="text-sm sm:text-base md:text-lg">
@@ -58,9 +60,11 @@ export default function PortfolioDisplayClient({
         <h2 className="text-2xl font-semibold text-blue-400 sm:text-3xl">
           Objectives
         </h2>
-        <ul className="list-inside list-disc space-y-2 text-sm sm:text-base md:text-lg">
-          {data.objectives.map((item, i) => (
-            <li key={i}>{item}</li>
+        <ul className="list-outside list-disc space-y-2 pl-6 text-sm sm:text-base md:text-lg">
+          {data.objectives.map((obj, i) => (
+            <li key={i} className="break-words">
+              {obj}
+            </li>
           ))}
         </ul>
       </motion.div>
@@ -74,9 +78,11 @@ export default function PortfolioDisplayClient({
         <h2 className="text-2xl font-semibold text-blue-400 sm:text-3xl">
           Features
         </h2>
-        <ul className="list-inside list-disc space-y-2 text-sm sm:text-base md:text-lg">
-          {data.features.map((item, i) => (
-            <li key={i}>{item}</li>
+        <ul className="list-outside list-disc space-y-2 pl-6 text-sm sm:text-base md:text-lg">
+          {data.features.map((feature, i) => (
+            <li key={i} className="break-words">
+              {feature}
+            </li>
           ))}
         </ul>
       </motion.div>

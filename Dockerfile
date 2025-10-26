@@ -1,12 +1,12 @@
 # Step 1: Use official Node.js image
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 # Step 2: Set working directory
 WORKDIR /app
 
 # Step 3: Copy package files and install dependencies
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 # Step 4: Copy project files
 COPY . .
@@ -15,7 +15,7 @@ COPY . .
 RUN npm run build
 
 # Step 6: Use a lightweight image for production
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 
 # Set environment variables
 ENV NODE_ENV=production

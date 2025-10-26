@@ -8,6 +8,6 @@ export const aboutHeroData: AboutHeroData = {
   profileImage: '/profile.jpg',
   bio: [
     `I’m Muhammad Saqib, a BSIT student in my 5th semester who enjoys building websites that help people. My first web project made me realize how exciting it is to turn an idea into something real.`,
-    `I’ve completed internships at Appaura and TechTommy, working with React.js, Node.js, and PostgreSQL. I’m eager to continue learning as a Full-Stack Developer Intern.`,
+    `I’ve completed internships at Appaura and TechTommy, working with React.js, Node.js, and PostgreSQL. I’m eager to continue learning as a Full Stack Developer Intern.`,
   ],
 };
