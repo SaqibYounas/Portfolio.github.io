@@ -26,7 +26,6 @@ export const portfolioData: PortfolioData = {
     'SEO optimized with Open Graph and Twitter cards.',
     'Dynamic project pages using static generation (SSG).',
     'Smooth animations powered by Framer Motion.',
-    'Dark/light mode ready with system preference detection.',
     'Dockerized setup for easy deployment and scaling.',
     'CI/CD pipeline implemented with GitHub Actions and Vercel.',
     'Code quality tools: ESLint, Prettier, and Husky for pre-commit checks.',
