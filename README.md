@@ -4,12 +4,12 @@
 
 ### Portfolio Screenshots
 
-![Portfolio 1](/Projects/Portfolio-Images/Portfolio-1.PNG)
-![Portfolio 2](/Projects/Portfolio-Images/Portfolio-2.PNG)
-![Portfolio 3](/Projects/Portfolio-Images/Portfolio-3.PNG)
-![Portfolio 4](/Projects/Portfolio-Images/Portfolio-4.PNG)
-![Portfolio 5](/Projects/Portfolio-Images/Portfolio-5.PNG)
-![Portfolio 6](/Projects/Portfolio-Images/Portfolio-6.PNG)
+![Portfolio 1](images/Portfolio-1.PNG)
+![Portfolio 2](images/Portfolio-2.PNG)
+![Portfolio 3](images/Portfolio-3.PNG)
+![Portfolio 4](images/Portfolio-4.PNG)
+![Portfolio 5](images/Portfolio-5.PNG)
+![Portfolio 6](images/Portfolio-6.PNG)
 
 ## Overview
 
