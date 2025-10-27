@@ -2,6 +2,15 @@
 
 [Live Demo](https://portfolio-github-io-seven-gamma.vercel.app)
 
+### Portfolio Screenshots
+
+![Portfolio 1](images/Portfolio-1.PNG)
+![Portfolio 2](images/Portfolio-2.PNG)
+![Portfolio 3](images/Portfolio-3.PNG)
+![Portfolio 4](images/Portfolio-4.PNG)
+![Portfolio 5](images/Portfolio-5.PNG)
+![Portfolio 6](images/Portfolio-6.PNG)
+
 ## Overview
 
 This is my personal developer portfolio website — a modern, fully responsive platform built using **Next.js** and **Tailwind CSS**. It showcases my journey as a **Full Stack Developer**, featuring my projects, technical skills, resume, and contact information in a visually engaging and performant design.
