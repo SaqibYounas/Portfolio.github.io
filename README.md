@@ -26,20 +26,6 @@ Many developers struggle to present their work in a professional, scalable, and 
 
 ---
 
-## Features
-
-- Fully responsive and modern UI using **Tailwind CSS**.
-- **SEO optimized** with Open Graph and Twitter cards.
-- **Dynamic project pages** using static generation (SSG).
-- Smooth **animations** powered by **Framer Motion**.
-- Dark/light mode ready with system preference detection.
-- **Dockerized** setup for easy deployment and scaling.
-- **CI/CD pipeline** implemented with GitHub Actions and Vercel.
-- Code quality tools: **ESLint**, **Prettier**, and **Husky** for pre-commit checks.
-- **Unit testing** configured with Jest and React Testing Library.
-
----
-
 ## Tech Stack
 
 - **Next.js 15** (App Router)
@@ -61,13 +47,6 @@ Many developers struggle to present their work in a professional, scalable, and 
 ## Version Control
 
 **Current Version:** 1.0
-
-**Planned Future Updates (v1.1):**
-
-- Add blog section
-- Integrate contact form with backend API
-- Add multilingual support
-- Improve accessibility and performance score
 
 ---
 
@@ -121,10 +100,13 @@ You can use Docker to run the portfolio locally. Check commands on your system i
 
 ---
 
-## Contact
+## Contact Form
 
-For inquiries, collaborations, or freelance work, you can reach out via the contact form on the website or connect through my social media links provided in the portfolio.
+A fully functional **contact form** is available on the portfolio website UI.  
+Users can send messages via the form, but the backend implementation is hidden for security purposes.
 
 ---
 
-**Note:** This is my personal portfolio project and is not open-source.
+## Note
+
+This is my **personal portfolio project** and is **not open-source**.
