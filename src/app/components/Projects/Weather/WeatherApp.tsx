@@ -57,9 +57,11 @@ export const WeatherAppPageClient: React.FC<Props> = ({ data }) => {
         <h2 className="text-2xl font-semibold text-blue-400 sm:text-3xl">
           Features
         </h2>
-        <ul className="list-inside list-disc space-y-2 text-sm sm:text-base md:text-lg">
+        <ul className="list-outside list-disc space-y-2 pl-6 text-sm sm:text-base md:text-lg">
           {data.features.map((feature, i) => (
-            <li key={i}>{feature}</li>
+            <li key={i} className="break-words">
+              {feature}
+            </li>
           ))}
         </ul>
       </motion.div>

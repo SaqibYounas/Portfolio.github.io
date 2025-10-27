@@ -7,7 +7,14 @@ jest.mock('framer-motion', () => {
   const React = require('react');
   return {
     motion: {
-      div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+      div: ({
+        children,
+        initial,
+        animate,
+        transition,
+        whileHover,
+        ...props
+      }: any) => <div {...props}>{children}</div>,
     },
   };
 });

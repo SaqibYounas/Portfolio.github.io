@@ -4,15 +4,33 @@ import '@testing-library/jest-dom';
 import ExperienceSection from '../ExperienceSection';
 import { experienceData } from '../../../data/About/experience';
 
-jest.mock('framer-motion', () => ({
-  motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    h2: ({ children, ...props }: any) => <h2 {...props}>{children}</h2>,
-  },
-}));
+jest.mock('framer-motion', () => {
+  const React = require('react');
+  return {
+    motion: new Proxy(
+      {},
+      {
+        get:
+          (_, key) =>
+          ({
+            children,
+            initial,
+            animate,
+            transition,
+            whileHover,
+            ...props
+          }: any) => <div {...props}>{children}</div>,
+      }
+    ),
+  };
+});
 
 jest.mock('next/link', () => {
-  return ({ children, href }: any) => <a href={href}>{children}</a>;
+  return ({ children, href, ...props }: any) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  );
 });
 
 describe('ExperienceSection Component', () => {
@@ -32,6 +50,16 @@ describe('ExperienceSection Component', () => {
       exp.details.forEach((detail) => {
         expect(screen.getByText(detail)).toBeInTheDocument();
       });
+    });
+  });
+
+  it('renders technologies used', () => {
+    render(<ExperienceSection />);
+
+    experienceData.forEach((exp) => {
+      expect(
+        screen.getByText(exp.technologies, { exact: false })
+      ).toBeInTheDocument();
     });
   });
 

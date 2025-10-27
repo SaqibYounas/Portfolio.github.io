@@ -44,7 +44,7 @@ export default function EducationSkillsSection() {
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
+          transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
           whileHover={{
             scale: 1.05,
             boxShadow: '0px 0px 20px rgba(6, 182, 212, 0.3)',

@@ -43,7 +43,7 @@ Many developers struggle to present their work in a professional, scalable, and 
 ## Tech Stack
 
 - **Next.js 15** (App Router)
-- **React.js 18**
+- **React.js 19**
 - **TypeScript**
 - **Tailwind CSS**
 - **Framer Motion**
@@ -76,6 +76,48 @@ Many developers struggle to present their work in a professional, scalable, and 
 The website is deployed on **Vercel** for fast and scalable hosting.
 
 [View Live Portfolio](https://portfolio-github-io-seven-gamma.vercel.app)
+
+---
+
+## Docker Setup (Reference Only)
+
+You can use Docker to run the portfolio locally. Check commands on your system instead of copy-pasting.
+
+### 1️⃣ Build Docker Image
+
+`docker build -t saqibyounas/portfolio:1.0 .`
+
+> Replace with proper syntax on your terminal. The image will be tagged as 1.0.
+
+### 2️⃣ Push Image to Docker Hub
+
+`docker push saqibyounas/portfolio:1.0`
+
+> Upload the image to your Docker Hub account.
+
+### 3️⃣ Pull Image from Docker Hub
+
+`docker pull saqibyounas/portfolio:1.0`
+
+> Download image on any machine.
+
+### 4️⃣ Run Container Locally
+
+`docker run -d -p 3000:3000 --name portfolio-app saqibyounas/portfolio:1.0`
+
+> Start the container and map port 3000. Open `http://localhost:3000` in browser.
+
+### 5️⃣ Stop & Remove Container
+
+`docker stop portfolio-app && docker rm portfolio-app`
+
+> Stop and clean up the running container.
+
+### 6️⃣ Clean Unused Images
+
+`docker system prune -a`
+
+> Free disk space by removing unused images, containers, and cache.
 
 ---
 
