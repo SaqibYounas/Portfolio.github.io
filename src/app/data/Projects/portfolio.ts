@@ -39,7 +39,7 @@ export const portfolioData: PortfolioData = {
 
   techStack: [
     'Next.js 15 (App Router)',
-    'React.js 18',
+    'React.js 19',
     'TypeScript',
     'Tailwind CSS',
     'Framer Motion',
