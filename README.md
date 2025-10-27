@@ -26,20 +26,6 @@ Many developers struggle to present their work in a professional, scalable, and 
 
 ---
 
-## Features
-
-- Fully responsive and modern UI using **Tailwind CSS**.
-- **SEO optimized** with Open Graph and Twitter cards.
-- **Dynamic project pages** using static generation (SSG).
-- Smooth **animations** powered by **Framer Motion**.
-- Dark/light mode ready with system preference detection.
-- **Dockerized** setup for easy deployment and scaling.
-- **CI/CD pipeline** implemented with GitHub Actions and Vercel.
-- Code quality tools: **ESLint**, **Prettier**, and **Husky** for pre-commit checks.
-- **Unit testing** configured with Jest and React Testing Library.
-
----
-
 ## Tech Stack
 
 - **Next.js 15** (App Router)
@@ -62,13 +48,6 @@ Many developers struggle to present their work in a professional, scalable, and 
 
 **Current Version:** 1.0
 
-**Planned Future Updates (v1.1):**
-
-- Add blog section
-- Integrate contact form with backend API
-- Add multilingual support
-- Improve accessibility and performance score
-
 ---
 
 ## Deployment
@@ -83,37 +62,25 @@ The website is deployed on **Vercel** for fast and scalable hosting.
 
 You can use Docker to run the portfolio locally. Check commands on your system instead of copy-pasting.
 
-### 1️⃣ Build Docker Image
-
-`docker build -t saqibyounas/portfolio:1.0 .`
-
-> Replace with proper syntax on your terminal. The image will be tagged as 1.0.
-
-### 2️⃣ Push Image to Docker Hub
-
-`docker push saqibyounas/portfolio:1.0`
-
-> Upload the image to your Docker Hub account.
-
-### 3️⃣ Pull Image from Docker Hub
+### 1️⃣ Pull Image from Docker Hub
 
 `docker pull saqibyounas/portfolio:1.0`
 
 > Download image on any machine.
 
-### 4️⃣ Run Container Locally
+### 2️⃣ Run Container Locally
 
 `docker run -d -p 3000:3000 --name portfolio-app saqibyounas/portfolio:1.0`
 
 > Start the container and map port 3000. Open `http://localhost:3000` in browser.
 
-### 5️⃣ Stop & Remove Container
+### 3️⃣ Stop & Remove Container
 
 `docker stop portfolio-app && docker rm portfolio-app`
 
 > Stop and clean up the running container.
 
-### 6️⃣ Clean Unused Images
+### 4️⃣ Clean Unused Images
 
 `docker system prune -a`
 
@@ -121,10 +88,13 @@ You can use Docker to run the portfolio locally. Check commands on your system i
 
 ---
 
-## Contact
+## Contact Form
 
-For inquiries, collaborations, or freelance work, you can reach out via the contact form on the website or connect through my social media links provided in the portfolio.
+A fully functional **contact form** is available on the portfolio website UI.  
+Users can send messages via the form, but the backend implementation is hidden for security purposes.
 
 ---
 
-**Note:** This is my personal portfolio project and is not open-source.
+## Note
+
+This is my **personal portfolio project** and is **not open-source**.
